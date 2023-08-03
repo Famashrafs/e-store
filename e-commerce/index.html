@@ -451,17 +451,23 @@
         </div>
       </div>
       </div>
-      
-      <!-- start cards -->
-      <div class="container card--container">
 
+  <div class="tabs-container">
+    <ul aria-labelledby="tabs-title">
+      <li><a id="tab-1" class="btn" href="#bestSeller"> Best Seller </a></li>
+      <li><a id="tab-2" class="btn" href="#newArrival">New Arrival </a></li>
+      <li><a id="tab-3" class="btn" href="#sale">Sale </a></li>
+    </ul>
+
+    <div class="tabs__panels flow">
+      <div id="bestSeller" class="menu-group" aria-labelledby="tab-1">
         <div class="card" style="width: 18rem;">
           <img src="img/cards/fashion-1.jpg" class="card-img-top" alt="...">
           <div class="new">new</div>
           <div class="discount">30%</div>
           <div class="card-body">
             <h5 class="card-title">EEZEEY womens Furry Cropped Zipped Fleece Jacket</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
             <div class="rating">
               <span class="fa fa-star star checked"></span>
               <span class="fa fa-star star checked"></span>
@@ -476,7 +482,6 @@
                 </div>
                 <i class=" fa-heart wish--list fa-solid" onclick="addToFav()"></i>
                 <i class="fa-solid fa-cart-shopping card--cart" onclick="addToCart()"></i>
-                <p class="card--cart">add to cart</p>
             </div>
           </div>
         </div>
@@ -526,6 +531,30 @@
           </div>
           </div>
         </div>
+        <div class="card" style="width: 18rem;">
+          <img src="img/cards/shoes-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Air Jordan 6 Rings Atmosphere</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="rating">
+              <span class="fa fa-star star checked"></span>
+              <span class="fa fa-star star checked"></span>
+              <span class="fa fa-star star checked"></span>
+              <span class="fa fa-star star checked"></span>
+              <span class="fa-regular fa-star-half-stroke checked"></span>
+            </div>
+            <div class="card--bottom">
+              <div class="price">
+                <p class="card--price" price-data='200'>200$</p>
+                <p class="old--price">320$</p>
+              </div>
+              <i class=" fa-heart wish--list fa-solid" onclick="addToFav()"></i>
+              <i class="fa-solid fa-cart-shopping card--cart" onclick="addToCart()"></i>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div id="newArrival" class="menu-group" aria-labelledby="tab-2">
         <div class="card" style="width: 18rem;">
           <img src="img/cards/electronic-1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -614,28 +643,8 @@
           </div>
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
-          <img src="img/cards/shoes-2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Air Jordan 6 Rings Atmosphere</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="rating">
-              <span class="fa fa-star star checked"></span>
-              <span class="fa fa-star star checked"></span>
-              <span class="fa fa-star star checked"></span>
-              <span class="fa fa-star star checked"></span>
-              <span class="fa-regular fa-star-half-stroke checked"></span>
-            </div>
-            <div class="card--bottom">
-              <div class="price">
-                <p class="card--price" price-data='200'>200$</p>
-                <p class="old--price">320$</p>
-              </div>
-              <i class=" fa-heart wish--list fa-solid" onclick="addToFav()"></i>
-              <i class="fa-solid fa-cart-shopping card--cart" onclick="addToCart()"></i>
-          </div>
-          </div>
-        </div>
+      </div>
+      <div id="sale" class="menu-group" aria-labelledby="tab-3">
         <div class="card" style="width: 18rem;">
           <img src="img/cards/shoes-3.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -725,45 +734,8 @@
           </div>
         </div>
       </div>
-      <!-- end cards -->
-      <!-- start testimonial  -->
-      <!-- start testimonials -->
-<div class="testim">
-  <div class="container">
-    <h2>Testimonials</h2>
-      <div class="testim-content">
-        
-      <div class="testim-box">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iure non reiciendis reprehenderit? Dicta eaque illo ut beatae alias quod, distinctio ad, asperiores vitae culpa qui nisi rerum debitis modi.</p>
-        <div class="testim-box-content">
-         <img src="https://i.postimg.cc/rpRQv1sc/3.jpg" alt="">
-          <h3>Mahmoud Mohamed</h3>
-          <p>FrontEnd Developer</p>
-        </div>
-      </div>
-        <div class="testim-box">
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iure non reiciendis reprehenderit? Dicta eaque illo ut beatae alias quod, distinctio ad, asperiores vitae culpa qui nisi rerum debitis modi.</p>
-          <div class="testim-box-content">
-            <img src="https://i.postimg.cc/rpRQv1sc/3.jpg" alt="">
-            <h3>Mahmoud Mohamed</h3>
-            <p>FrontEnd Developer</p>
-          </div>
-        </div>
-          <div class="testim-box">
-  
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iure non reiciendis reprehenderit? Dicta eaque illo ut beatae alias quod, distinctio ad, asperiores vitae culpa qui nisi rerum debitis modi.</p>
-            <div class="testim-box-content">
-              <img src="https://i.postimg.cc/rpRQv1sc/3.jpg" alt="">
-              <h3>Mahmoud Mohamed</h3>
-              <p>FrontEnd Developer</p>
-            </div>
-          </div>
-
-        </div>
+    </div>
   </div>
-</div>
-<!-- end testimonils -->
       <!-- end testimonial  -->
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/bootstrap.js"></script>

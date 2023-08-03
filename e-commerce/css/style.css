@@ -573,19 +573,33 @@ display: flex;
 }
 /* end brands */
 /* start cards */
+.bestSeller-btns{
+    display: flex;
+    margin-left: 150px;
+}
+.btn{
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-right: 20px;
+    padding: 5px 15px;
+}
+.btn:hover{
+    background-color: #000000db;
+    color:#fff;
+}
+.active-filter-btn{
+    background-color: #000000db;
+    color: #fff;
+}
 .card--container{
     display: grid;
     justify-items: center;
     grid-template-columns: auto auto auto;
-    margin-top: 50px;
 }
 .card{
     position: relative;
     margin-top: 50px;
-    padding-top: 10px;
-    /* background: linear-gradient(2deg, #0345796b, #034579); */
-    border-radius: 20PX;
-    height: 570px;
     align-items: center;
 }
 .card-body{
@@ -624,9 +638,8 @@ display: flex;
     
 }
 .card img{
-    height: 250px;
+    height: 320px;
     width: 250px;
-    margin-left: 5px;
 }
 .star{
     color:#43749b9e;
@@ -706,75 +719,40 @@ display: flex;
     display: block;
 } */
 /* end cards  */
-/* start testimonial  */
-.testim{
-    position: relative;
-    padding: 80px 60px;
-  }
-  .testim h2{
-    color: var(--secound-color);
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  .testim::before{
-    position: absolute;
-    content: "";
-    width: 50%;
-    top: 0;
-    left: 0;
-    background-color: var(--main-color);
-    height: 100%;
-    z-index: -1;
-      }
-  
-  .testim::after{
-    position: absolute;
-    content: "";
-    width: 50%;
-    top: 0;
-    right:  0;
-    background-color: #0d141f;
-    height: 100%;
-      }
-      
-  .testim-content{
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
-  
+
+
+/* start test */
+[role="tablist"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
   }
   
-  .testim-box{
-  z-index: 2;
-  background-color: var(--secound-color);
-  padding: 20px 30px;
-  
-  }
-  
-  
-  
-  .testim-box-content img{
-    top: -10px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 30px;
-    position: relative;
-  
-  }
-  
-  .testim-content h3{
+  [aria-selected="true"] {
+    text-decoration-thickness: 0.25em;
+    text-underline-offset: 0.5em;
     color: #fff;
-    font-size: 1.3rem;
-    }
-    .testim-box > p{
-      color: rgb(209, 194, 194);
-      font-style: italic;
-      padding-bottom: 20px;
-    }
-  .testim-box-content p{
-  color: var(--main-color);
+    background-color: #000000db;
   }
-/* end testimonial  */
+  
+  /* extra styling to make the tabs look better that wasn't in the video */
+  .tabs-container {
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    background: hsl(0 0% 50% / 0.1);
+  }
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+.menu-group{
+    display: flex;
+}
+/* end test */
