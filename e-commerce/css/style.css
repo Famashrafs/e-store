@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-:root{
-    --light:#fff;
-    --dark:#020306;
-    --main-color:#73a2ef;
-}
 body {
-    background-color: #fff;
+    background-color:hsl(0 0% 50% / 0.1);
     height: 1200px;
 }
 /* start nav bar */
@@ -20,6 +15,8 @@ header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    background: #000000db;
+    padding: 7px 110px;
 }
 .header-top ul{
     padding: 0;
@@ -33,22 +30,22 @@ header{
     position: absolute;
     left: 0px;
     top: 25px;
-    background: #ffffff;
+    background: #222;
 }
 .header-top ul ul li{
     text-align: center;
 }
 .header-top ul ul .current{
-    background-color: #e7e7e7;
+    background-color: #676464;
 }
 .header-top ul li a{
     text-decoration: none;
-    color: #333;
+    color: #aaa;
     padding: 10px;
     font-size: 13px;
 }
 .header-top ul li a:hover{
-    color: #1166f3;
+    color: #fff;
 }
 .header-top ul li:hover ul {
     display: flex;
@@ -118,14 +115,14 @@ nav li:hover::after{
 }
 .dropdown--menu{
     position: absolute;
-    right: -625px;
+    right: -675px;
     display: none;
     z-index: 1000;
 }
 .menu--list{
     margin-top: 18px;
     padding: 10px;
-    background: linear-gradient(1deg, #73a2efa3, white);
+    background:#fff;
 }
 .women--list:hover  .dropdown--menu{
     display: flex;
@@ -196,7 +193,6 @@ nav li:hover::after{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000000db;
     padding: 10px;
 }
 .search--txt{
@@ -204,7 +200,7 @@ nav li:hover::after{
     border: none;
     padding: 5px 15px;
     display: flex;
-    width: 360px;
+    width: 200px;
     border-radius: 10px;
 }
 .search--box a {
@@ -278,7 +274,7 @@ nav li:hover::after{
     height: 550px;
 }
 .slide{
-    height: calc(100vh - 160px);
+    height: calc(100vh - 114px);
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -303,7 +299,7 @@ nav li:hover::after{
 .slide-background{
         background-color: #242424;
         width: 850px;
-        height: calc(100vh - 160px);
+        height: calc(100vh - 114px);
         clip-path: polygon(80% 0, 100% 0, 100% 100%, 0% 100%);
         position: absolute;
         z-index: 0;
@@ -316,6 +312,9 @@ nav li:hover::after{
 .slide-1 h2{
     font-size: 65px;
     font-family: 'Bebas Neue', sans-serif;
+}
+.slide-1 img{
+    z-index: 111;
 }
 .slide-1 a {
     color: #000;
@@ -545,6 +544,7 @@ display: flex;
 .brand{
     position: relative;
     width: 300px;
+    height: 400px;
 }
 .brands .carousel-item::after{
     content: "";
@@ -599,17 +599,10 @@ display: flex;
 }
 .card{
     position: relative;
-    margin-top: 50px;
     align-items: center;
-}
-.card-body{
-    min-height: unset;
-    padding: 1.25rem;
-    background: #ffffff47;
-    border-radius: 45px 45px 0 0;
-    border: 0;
-    width: 290px;
-    margin-top: 10px;
+    border: none;
+    background-color: hsl(0deg 0% 94.9%);
+    margin: 50px 15px;
 }
 .discount{
     position: absolute;
@@ -637,12 +630,9 @@ display: flex;
     text-align: center;
     
 }
-.card img{
-    height: 320px;
-    width: 250px;
-}
 .star{
     color:#43749b9e;
+    font-size: 14px;
 }
 .checked{
     color:#ff9c1a;
@@ -650,12 +640,15 @@ display: flex;
 .price{
     display: flex;
     align-items: center;
-    padding-top: 15px;
 }
 .card--price{
-    font-size: 25px;
-    font-weight: bold;
-    margin-right: 20px;
+    font-size: 18px;
+    padding: 2px 7px;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    top: 397px;
+    left: 0;
 }
 .old--price{
     text-decoration: line-through;
@@ -678,15 +671,17 @@ display: flex;
     border-radius: 10px;
 }
 .card--bottom .wish--list{
-    color: rgb(207, 44, 44);
-    position: relative;
+    color: #000000db;
+    position: absolute;
+    top: 20px;
+    right: 30px;
 }
 .card--bottom .wish--list::after{
     content: attr(added);
     display: none;
     position: absolute;
     top: 25px;
-    background-color:#d32828ba;
+    background-color:#000000ba;
     color: #fff;
     font-size: 10px;
     padding: 10px 20px;
@@ -697,10 +692,6 @@ display: flex;
 }
 .card--bottom .wish--list:hover::after{
     display: block;
-}
-.card--bottom .wish--list{
-    color: rgb(207, 44, 44);
-    position: relative;
 }
 /* .card--bottom .wish--list::after{
     content:attr(added);
@@ -741,7 +732,6 @@ display: flex;
   .tabs-container {
     padding: 2.5rem;
     border-radius: 0.5rem;
-    background: hsl(0 0% 50% / 0.1);
   }
   .visually-hidden {
     clip: rect(0 0 0 0);
