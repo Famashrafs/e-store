@@ -763,18 +763,50 @@ footer{
     width: 100%;
     height: 60vh;
     background-color: #000000db;
+    color: #fff;
+    display: flex;
+    padding: 70px;
 }
 footer div{
-    width: 25%;
+    width: 20%;
+    margin: 20px;
 }
-.follow-us{
-    
+.us-imgs{
+    display: flex;
+    margin:0;
 }
-.follow-us img{
+.us img{
+    width: 75px;
+    height: 40px;
+    margin: 0 10px 0px 0;
+}
+footer  a{
+    color: #fff;
+}
+footer a:hover{
+    text-decoration: none;
+    color: #aaa;
+}
+.address{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin: 0;
+}
+.address img{
+    margin-bottom: 20px;
+}
+.site{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin: 0 0 20px 0;
+}
+.contact img{
     width: 30px;
     filter: grayscale(10);
 }
-.follow-us img:hover{
+.contact img:hover{
     filter:none;
     transition: all 0.2s;
 }
