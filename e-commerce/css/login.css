@@ -1,0 +1,31 @@
+body{background: url(../img/login-background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.loginBody{
+    width: 65vw;
+    background-color: #00000040;
+    display: flex;
+}
+.logo{
+    width: 50%;
+}
+.logo img {
+    width: 200px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #ffffff17;
+    width: 50%;
+    height: 95vh;
+    align-content: center;
+    border: 2px solid #fff;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0;
+}
