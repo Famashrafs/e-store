@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="product-image-container">
+    </div>
     
+    <script>
+        // Retrieve the product image URL from the data attribute of the anchor tag on the previous page
+        const searchParams = new URLSearchParams(window.location.search);
+        const productImage = searchParams.get('data-image');
+      
+        // Display the product image on the page
+        const productImageContainer = document.getElementById('product-image-container');
+        const imgElement = document.createElement('img');
+        imgElement.src = productImage;
+        productImageContainer.appendChild(imgElement);
+      </script>
+      
 </body>
 </html>

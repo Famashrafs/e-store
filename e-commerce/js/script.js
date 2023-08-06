@@ -48,10 +48,14 @@ let productPrice=Number(cardPrice.getAttribute("price-data"));
 console.log(totalPrice)
 console.log(productPrice)
 function addToCart(){
- Swal.fire({
+  const img=document.querySelector(".addToCart").nextElementSibling.src;
+  Swal.fire({
   title: 'Are you sure?',
   text: "adding this product to the cart",
-  icon: 'warning',
+  imageUrl: `${img}`,
+  imageWidth: 275,
+  imageHeight: 400,
+  imageAlt: 'Custom image',
   showCancelButton: true,
   confirmButtonColor: '#35ad66',
   cancelButtonColor: '#d33',
