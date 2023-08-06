@@ -12,12 +12,41 @@
             <img src="./img/logo.png" alt="">
         </div>
         <form action="">
-            <input type="email">
-            <input type="password">
-            <input type="button" value="login">
-            <input type="button" value="login using Google">
-            <input type="button" value="login using facebook">
+            <h1>Login </h1>
+            <input type="email" placeholder="Email" class="email">
+            <div class="password">
+                <input type="password" class="passcode" placeholder="Password">
+                <div class=" passwordIcon show" onclick="showPassword()"></div>
+            </div>
+            <input type="submit" value="login">
+            <div class="google">
+                <img src="./img/google.png" alt="login with google">
+                <p>login using Google</p>
+            </div>
+            <div class="facebook">
+                <img src="./img/facelogo.png" alt="login with facebook">
+                <p>login using Facebook</p>
+            </div>
+            <footer>
+                <a href="loginpage.html">Forget your password ?</a>
+                <a href="">Dont have an account ? sign up</a>
+            </footer>
         </form>
     </div>
+    <script>
+        const passwordIcon=document.querySelector(".passwordIcon"),
+              password=document.querySelector(".passcode");
+        function showPassword(){
+            if(passwordIcon.classList.contains("show")){
+                passwordIcon.classList.remove("show")
+                passwordIcon.classList.add("hide")
+                password.type="text";
+            } else if(passwordIcon.classList.contains("hide")){
+                passwordIcon.classList.add("show")
+                passwordIcon.classList.remove("hide")
+                password.type="password";
+            }
+        }
+    </script>
 </body>
 </html>
