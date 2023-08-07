@@ -4,8 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product.css">
 </head>
 <body>
+    <!-- nav start bar -->
+    <div class="header-top">
+        <ul class="header-left">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Featured Products</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+        <ul class="header-right">
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">USD <i class="fa-sharp fa-solid fa-chevron-down" style="font-size:10px"></i></a>
+          <ul>
+            <li  class="current"><a href="#">USD</a></li>
+            <li><a href="#">EURO</a></li>
+            <li><a href="#">GBP</a></li>
+            <li><a href="#">INR</a></li>
+          </ul>
+          </li>
+          <li><a href="#">English <i class="fa-sharp fa-solid fa-chevron-down" style="font-size:10px"></i></a>
+            <ul>
+              <li  class="current"><a href="#">English</a></li>
+              <li><a href="#">Arabic</a></li>
+              <li><a href="#">German</a></li>
+              <li><a href="#">Spanish</a></li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+            <header class="container">
+                     <div class="header-bottom">
+                      <img src="./img/logo.png" class="logo" alt="logo">
+                      <nav>
+                        <ul>
+                          <li>home</li>
+                          <li>shop</li>
+                          <li class="women--list">women
+                            <i class="fa-sharp fa-solid fa-chevron-down" style="font-size:13px"></i>
+                          <div class="dropdown--menu" >
+                            <ul class="menu--list">
+                              <div>
+                                <h6>women clothing</h6>
+                                <li>dresses</li>
+                                <li>top & tees</li>
+                                <li>jackets & coats</li>
+                                <li>pants & capris</li>
+                                <li>sweaters</li>
+                                <li>costumes</li>
+                                <li>hoodies & sweatshirts</li>
+                                <li>pajamas & robes</li>
+                                <li>shorts</li>
+                                <li>swimwear</li>
+                              </div>
+                              <div>
+                                <h6>jewelry</h6>
+                                <li>accessories</li>
+                                <li>bags & purses</li>
+                                <li>necklaces</li>
+                                <li>rings</li>
+                                <li>earring</li>
+                                <li>bracelets</li>
+                                <li>body jewelry</li>
+                              </div>
+                              <div>
+                                <h6>beauty</h6>
+                                <li>bath accessoris</li>
+                                <li>makeup & cosmetics</li>
+                                <li>skin care</li>
+                                <li>hair care</li>
+                                <li>essenital oils</li>
+                                <li>fragrances</li>
+                                <li>soaps & bath bombs</li>
+                                <li>face masks & covering</li>
+                                <li>spa kits & gifts</li>
+                              </div>
+                              <div class="brand--menu">
+                                <h6>top brands</h6>
+                              <div>
+                                <li>nike</li>
+                                <li>hermes</li>
+                                <li>zalando</li>
+                                <li>zara</li>
+                                <li>cartier</li>
+                                <li>hurley</li>
+                              </div>
+                              <div>
+                                <li>louis vuitton</li>
+                                <li>gucci</li>
+                                <li>tiffany & co.</li>
+                                <li>h&m</li>
+                                <li>chanel</li>
+                                <li>view all brands</li>
+                              </div>
+                              </div>
+                            </ul>
+                                <div class="media">
+                                  <div class="thumbnail">
+                                    <img src="img/mostWanted.jpg" alt="most Wanted">
+                                    <div class="text--content">
+                                      <h4>Most Wanted!</h4>
+                                      <a href="#" class="primary-button">Order Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                          </div>
+                        </li>
+                          <li>men</li>
+                          <li>sports</li>
+                          
+                        </ul>
+                      </nav>
+                      <div class="search--box">
+                        <input class="search--txt" type="text" placeholder="type to search ">
+                        <a class="search--btn" href="#">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                      <div class="cart">
+                        <a href="loginpage.html"><i class="fa-regular fa-user"></i></a>
+                        <i class="fa-regular fa-heart wish--list"></i>
+                        <div class="nav-cart">
+                          <i class="fa-solid fa-cart-shopping nav--cart"></i>
+                          <div class="icon-text">
+                            <div class="mini-text">Total</div>
+                            <div class="cart-total" total-price="0">$</div>
+                          </div>
+                        </div>
+                      </div>
+                      <i class="fa-solid fa-bars menu"></i>
+                     </div>
+            </header>
+    <!-- end nav bar -->
     <div id="product-image-container">
     </div>
     
@@ -13,13 +147,25 @@
         // Retrieve the product image URL from the data attribute of the anchor tag on the previous page
         const searchParams = new URLSearchParams(window.location.search);
         const productImage = searchParams.get('data-image');
-      
+        const img1=`${productImage.replace("1","11")}`;
+        const img2=`${productImage.replace("1","12")}`;
+        const img3=`${productImage.replace("1","13")}`;
+        console.log(img1)
         // Display the product image on the page
         const productImageContainer = document.getElementById('product-image-container');
         const imgElement = document.createElement('img');
+        const imgElement1 = document.createElement('img');
+        const imgElement2 = document.createElement('img');
+        const imgElement3 = document.createElement('img');
         imgElement.src = productImage;
+        imgElement1.src = img1;
+        imgElement2.src = img2;
+        imgElement3.src = img3;
         productImageContainer.appendChild(imgElement);
+        productImageContainer.appendChild(imgElement1);
+        productImageContainer.appendChild(imgElement2);
+        productImageContainer.appendChild(imgElement3);
       </script>
-      
+      <script src="https://kit.fontawesome.com/7bed3c335a.js" crossorigin="anonymous"></script>
 </body>
 </html>
