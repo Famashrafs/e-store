@@ -30,6 +30,7 @@ header{
     left: 0px;
     top: 25px;
     background: #222;
+    z-index: 100;
 }
 .header-top ul ul li{
     text-align: center;
@@ -208,11 +209,23 @@ nav li:hover::after{
 .nav-cart{
     display:flex;
     align-items: center;
+    position: relative;
 }
 .nav-cart .icon-text{
     font-weight: bold;
     font-size: 14px;
     margin-left: 10px;
+}
+.cart-menu{
+    display: none;
+    background-color: #fff;
+    width: 350px;
+    height: 218px;
+    position: absolute;
+    top: 50px;
+    right: -100px;
+    z-index: 1000;
+    border: 10px solid #0f0;
 }
 .cart-total::after{
     content: attr(total-price);
@@ -276,6 +289,24 @@ nav li:hover::after{
     height: 5px;
     background-color: #000000;
 }
+.pre-slider-btn{
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+}
+.next-slider-btn{
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+}
 .slide-1{
     display: flex;
     justify-content: flex-start;
@@ -315,10 +346,10 @@ nav li:hover::after{
     color: #fff;
     transition: all 0.5s;
 }
-.slide-content{
+.slide-1 .slide-content{
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-left: 90px;
     align-items: start;
 }
 .slide-2 h1{
@@ -428,9 +459,16 @@ nav li:hover::after{
     left: 380px;
 }
 .slide-4{
-    background-color: #8daab3;
     color: #000;
     justify-content: space-between;
+}
+.slide-4 .slide-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 55px;
 }
 .slide-4 h2{
     font-weight: bold; 
@@ -441,38 +479,69 @@ nav li:hover::after{
 .slide-4 p{
     font-family: 'Raleway', sans-serif;
     padding-left: 50px;
+    max-width: 600px;
 }
 .slide-4 button{
     background: none;
-    border: 2px solid #b2daf1;
-    color: #b2daf1;
-    position: absolute;
-    bottom: 150px;
-    left: 370px;
+    border: 2px solid #000000;
+    color: #000;
     padding: 10px 20px;
     font-weight: bold;
+    margin-left: 50px;
+    margin-top: 15px;
 }
 .slide-4 button:hover{
-    background-color: #b2daf1;
-    color: #000;
+    background-color: #000000ba;
+    color: #fff;
     transition: all .5s;
 }
-.firnitures{
-    display: flex;
-    position: absolute;
-    width: 300px;
-    bottom: 30px;
+.furniture-1{
+    width: 330px;
+    margin-right: 35px;
 }
-.firnitures img{
-    background-color: #ffffff36;
+.furniture-2{
+    position: absolute;
+    width: 250px;
+    right: 245px;
+}
+.furnitures img{
+    background-color: #000000ba;
     margin: 20px;
     width: 175px;
     border-radius: 25px;
     padding: 10px;
 }
-.furniture{
-    width: 400px;
-    border-radius: 35px;
+.furnitures img:hover{
+    transform: scale(1.1);
+    transition: all .5s;
+    cursor: pointer;
+}
+.slide-5{
+    background-image: url(../img/slide-5.jpg);
+    background-size: cover;
+    background-position: 0px;
+    color: #fff;
+}
+.slide-5 .slide-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    text-align: center;
+    align-items: center;
+}
+.slide-5 .slide-content button{
+    background: none;
+    color: #fff;
+    border: 2px solid #3b2c1c;
+    padding: 12px 35px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 21px;
+}
+.slide-5 .slide-content button:hover{
+    background:#3b2c1c;
+    color:#fff;
+    transition: all .5s;
 }
 /* end slider */
 /* start ads */
@@ -577,6 +646,10 @@ display: flex;
 }
 /* end brands */
 /* start cards */
+.tabs__panels .container{
+    max-width: 2000px;
+    padding: 0;
+}
 .bestSeller-btns{
     display: flex;
     margin-left: 150px;
@@ -604,9 +677,18 @@ display: flex;
 .card{
     position: relative;
     align-items: flex-start;
-    border: none;
+    border: 2px solid transparent;
     background-color: hsl(0deg 0% 94.9%);
-    margin: 50px 15px;
+    margin: 50px 21px 0 0;
+    padding: 0;
+}
+.card:hover{
+    border: 2px solid;
+    transition: all .5s;
+}
+.card a{
+    color: #000;
+    text-decoration: none;
 }
 .addToCart{
     display: none;
@@ -657,7 +739,7 @@ display: flex;
 }
 .card img{
     height: 425px;
-    width: 300px;
+    width: 298px;
 }
 .card-body{
     align-items: flex-start;
@@ -686,7 +768,7 @@ display: flex;
     color: #fff;
     position: absolute;
     top: 397px;
-    left: 0;
+    left: 15px;
 }
 .card--bottom{
     display: flex;
@@ -707,9 +789,9 @@ display: flex;
     color: #000000db;
     position: absolute;
     top: 20px;
-    right: 0px;
+    right: 10px;
     padding: 5px;
-    border-radius: 9px;
+    border-radius: 5px;
     background: #fffcfc57;
 }
 .card--bottom .wish--list::after{
@@ -783,11 +865,28 @@ display: flex;
     display: flex;
 }
 /* end test */
+/* start blogs */
+.blogs .container{
+    display: flex;
+    max-width: 2000px;
+}
+.blogs a{
+    color: #000;
+}
+.blogs img{
+    width: 400px;
+}
+.blog-1 , .blog-2 , .blog-3{
+    padding: 20px;
+    width: 400px;
+    margin: 0 20px;
+}
+/* end blogs */
 /* start subs */
 .subscribe{
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     background-color: #ddd;
     display: flex;
     flex-direction: column;
@@ -797,20 +896,21 @@ display: flex;
 .subscribe h3{
     background: #222;
     color: #fff;
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 15px 25px;
-    border: 5px solid #4e9dff;
+}
+.subscribe p{
+    max-width: 400px;
+    text-align: center;
 }
 form{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
 }
 .subscribe input[type ="button"]{
     background: #222;
     color: #fff;
-    border: 3px solid #4d9bfb;
     border-radius: 15px;
     padding: 10px 20px;
 }
@@ -877,10 +977,24 @@ footer a:hover{
 }
 .contact img{
     width: 30px;
+    margin-right: 5px;
     filter: grayscale(10);
 }
 .contact img:hover{
     filter:none;
     transition: all 0.2s;
+    cursor: pointer;
 }
 /* end footer */
+/* start cobyright */
+.copyRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #181515;
+    color: #fff;
+}
+.copyRight p{
+    margin: 0 10px;
+}
+/* end cobyright */

@@ -8,6 +8,10 @@
 //     body.classList.toggle("night")
 // })
 
+
+
+
+
   let nav= document.querySelector("nav"),
       navUl= document.querySelector("ul"),
       menu=document.querySelector(".menu");
@@ -15,30 +19,7 @@ function menuHide(){
   nav.classList.toggle("mobileHide")
   navUl.classList.toggle("mobileMenu")
 }
-
 menu.addEventListener("click",menuHide);
-
-// card rating starts 
-// let stars=document.querySelectorAll(".star ");
-// stars.forEach((star ,index1) => {
-//   star.addEventListener("click", () =>{
-//      stars.forEach((star ,index2)=>{
-//       index1 >= index2 ?  star.classList.add("checked") : star.classList.remove("checked")
-//      }
-//      )})
-// })
-// add to wish list icon
- let wishList=document.querySelector(".card--bottom .wish--list");
- function addToFav(){
-  if(wishList.classList.contains("fa-regular")){
-    wishList.classList.replace("fa-regular","fa-solid");
-    let added= wishList.setAttribute("added","added to favorite");
-  }else{
-    wishList.classList.replace("fa-solid","fa-regular");
-    let added= wishList.setAttribute("added","add to favorite")
-  }
-  console.log(wishList)
- }
 
 // add to cart alert 
 let cartTotal=document.querySelector(".cart-total");
@@ -49,6 +30,7 @@ console.log(totalPrice)
 console.log(productPrice)
 function addToCart(){
   const img=document.querySelector(".addToCart").nextElementSibling.src;
+  const name=document.querySelector(".addToCart").closest("h5");
   Swal.fire({
   title: 'Are you sure?',
   text: "adding this product to the cart",
@@ -74,26 +56,50 @@ function addToCart(){
 }
 let price =window.getComputedStyle(cartTotal ,"::after");
 totalPrice =price.getPropertyValue("content");
-// function starHoverIn(){
-//   star.classList.add("checked")
-// }
-// function starHoverOut(){
-//   star.classList.remove("checked")
-// }
+
+// cart menu 
+const navCart=document.querySelector(".nav--cart");
+const cartMenu=document.querySelector(".cart-menu");
+navCart.addEventListener("click",function(){
+  if(cartMenu.style.display=="flex"){
+    cartMenu.style.cssText="display:none";
+  }else{
+    cartMenu.style.cssText="display:flex";
+  }
+})
+const productimg=document.querySelector(".card-img-top").src;
+const productName=document.querySelector(".card-title").innerHTML;
+const cartProduct=document.querySelector(".nav-cart-product");
+const cartProductImage=document.createElement("img");
+cartProductImage.setAttribute("href",productimg)
+cartProductImage.classList.add("cart-product-img")
+cartProduct.appendChild(cartProductImage)
+const cartProductName=document.createElement("h3");
+cartProductName.classList.add("cart-product-name")
+cartProductName.innerHTML=productName;
+cartProduct.appendChild(cartProductName)
+const cartProductPrice=document.createElement("p");
+cartProductPrice.innerHTML=productPrice;
+cartProductPrice.classList.add("cart-product-price")
+cartProduct.appendChild(cartProductPrice)
 
 
-// function myFunction() {
-//     var x = document.getElementById("myTopnav");
-//     if (x.className === "topnav") {
-//       x.className += " responsive";
-//     } else {
-//       x.className = "topnav";
-//     }
-//   }
 
 
+// add to wish list icon
+function addToFav(event) {
+  let wishList = event.target;
+  let cardBottom = wishList.closest('.card--bottom');
+  if (wishList.classList.contains("fa-regular")) {
+    wishList.classList.replace("fa-regular", "fa-solid");
+    wishList.setAttribute("added", "added to favorite");
+  } else {
+    wishList.classList.replace("fa-solid", "fa-regular");
+    wishList.setAttribute("added", "add to favorite");
+  }
+}
 
-// start test
+// start tabs
 const tabsContainer = document.querySelector(".tabs-container");
 const tabsList = tabsContainer.querySelector("ul");
 const tabButtons = tabsList.querySelectorAll("a");
@@ -124,50 +130,9 @@ tabPanels.forEach((panel) => {
 tabsContainer.addEventListener("click", (e) => {
   const clickedTab = e.target.closest("a");
   if (!clickedTab) return;
-  e.preventDefault();
 
   switchTab(clickedTab);
 });
-
-tabsContainer.addEventListener("keydown", (e) => {
-  switch (e.key) {
-    case "ArrowLeft":
-      moveLeft();
-      break;
-    case "ArrowRight":
-      moveRight();
-      break;
-    case "Home":
-      e.preventDefault();
-      switchTab(tabButtons[0]);
-      break;
-    case "End":
-      e.preventDefault();
-      switchTab(tabButtons[tabButtons.length - 1]);
-      break;
-  }
-});
-
-function moveLeft() {
-  const currentTab = document.activeElement;
-  if (!currentTab.parentElement.previousElementSibling) {
-    switchTab(tabButtons[tabButtons.length - 1]);
-  } else {
-    switchTab(
-      currentTab.parentElement.previousElementSibling.querySelector("a")
-    );
-  }
-}
-
-function moveRight() {
-  const currentTab = document.activeElement;
-  if (!currentTab.parentElement.nextElementSibling) {
-    switchTab(tabButtons[0]);
-  } else {
-    switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
-  }
-}
-
 function switchTab(newTab) {
   const activePanelId = newTab.getAttribute("href");
   const activePanel = tabsContainer.querySelector(activePanelId);
@@ -187,5 +152,3 @@ function switchTab(newTab) {
   newTab.setAttribute("tabindex", "0");
   newTab.focus();
 }
-
-// end test

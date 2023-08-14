@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/product.css">
 </head>
@@ -140,32 +167,107 @@
                      </div>
             </header>
     <!-- end nav bar -->
-    <div id="product-image-container">
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <p>/</p>
+      <a href="product.html">Product Name</a>
     </div>
-    
+    <div class="product">
+      <div id="product-image-container">
+        <img src="img/cards/best-1.jpg" class=" img product-img" alt="product">
+        <div class="small-imgs">
+          <img src="img/cards/best-1.jpg" class=" img small-img1" alt="small product image">
+          <img src="img/cards/best-1.jpg" class=" img small-img2" alt="small product image">
+          <img src="img/cards/best-1.jpg" class=" img small-img3" alt="small product image">
+        </div>
+      </div>
+      <div class="product-info">
+        <h1 class="product-title"></h1>
+      <div class="rating">
+        <span class="fa fa-star star checked"></span>
+        <span class="fa fa-star star checked"></span>
+        <span class="fa fa-star star checked"></span>
+        <span class="fa fa-star star checked"></span>
+        <span class="fa fa-star star checked"></span>
+        <p class="rating-number">(2,000)</p>
+      </div>
+      <p class="in-stock">in stock</p>
+      <h3 class="product-price"></h3>
+      <div class="product-color">
+        <h3>Color</h3>
+        <input type="radio" name="color">
+        <input type="radio" name="color">
+        <input type="radio" name="color">
+      </div>
+      <div class="product-size">
+        <h3>Size</h3>
+        <input type="radio" name="size">
+        <input type="radio" name="size">
+        <input type="radio" name="size">
+      </div>
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-share-nodes"></i>
+      <div class="product-counter">
+        <button id="decrement" class="decrement">-</button>
+        <div id="counter" class="counter">0</div>
+        <button id="increment" class="increment">+</button>
+        <button class="add">Add to cart</button>
+      </div>
+      </div>
+
+    </div>
     <script>
-        // Retrieve the product image URL from the data attribute of the anchor tag on the previous page
+        // Retrieve the product data URL from the data attribute of the anchor tag on the previous page
         const searchParams = new URLSearchParams(window.location.search);
         const productImage = searchParams.get('data-image');
-        const img1=`${productImage.replace("1","11")}`;
-        const img2=`${productImage.replace("1","12")}`;
-        const img3=`${productImage.replace("1","13")}`;
-        console.log(img1)
-        // Display the product image on the page
+        const productTitle = searchParams.get('data-title');
+        const productPrice = searchParams.get('data-price');
+        const img1=`${productImage}`;
+        const img2=`${productImage}`;
+        const img3=`${productImage}`;
+        // Display the product data on the page
         const productImageContainer = document.getElementById('product-image-container');
-        const imgElement = document.createElement('img');
-        const imgElement1 = document.createElement('img');
-        const imgElement2 = document.createElement('img');
-        const imgElement3 = document.createElement('img');
-        imgElement.src = productImage;
-        imgElement1.src = img1;
-        imgElement2.src = img2;
-        imgElement3.src = img3;
-        productImageContainer.appendChild(imgElement);
-        productImageContainer.appendChild(imgElement1);
-        productImageContainer.appendChild(imgElement2);
-        productImageContainer.appendChild(imgElement3);
+        const smallImgContainer = document.querySelector('.small-imgs');
+        const imgElement  = document.querySelector('.product-img');
+        const imgElement1 = document.querySelector('.small-img1');
+        const imgElement2 = document.querySelector('.small-img2');
+        const imgElement3 = document.querySelector('.small-img3');
+        document.querySelector(".product-title").innerHTML=productTitle;
+        document.querySelector(".product-price").innerHTML=`$${productPrice}`;
+        if(productImage == null && productTitle == null && productPrice == null){
+          imgElement.src ='img/hide.png';
+          imgElement1.src = 'img/hide.png';
+          imgElement2.src = 'img/hide.png';
+          imgElement3.src = 'img/hide.png';
+          document.querySelector(".product-title").innerHTML='product Name';
+          document.querySelector(".product-price").innerHTML='product Price';
+        }else{
+          imgElement.src = productImage;
+          imgElement1.src = img1;
+          imgElement2.src = img2;
+          imgElement3.src = img3;
+        }
+        let incrementButton = document.getElementById("increment");
+        let decrementButton = document.getElementById("decrement");
+        let counter = document.getElementById("counter");
+        let count = 0;
+
+        incrementButton.addEventListener("click", function () {
+          count++;
+          counter.textContent = count;
+        });
+
+        decrementButton.addEventListener("click", () => {
+            if(count > 0){
+            count--;
+            }else{
+              count
+            }
+          counter.textContent = count;
+        });
       </script>
+      <script src="js/script.js"></script>
+      <script src="js/jquery-3.6.0.min.js"></script>
       <script src="https://kit.fontawesome.com/7bed3c335a.js" crossorigin="anonymous"></script>
 </body>
 </html>

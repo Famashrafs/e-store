@@ -2,6 +2,64 @@
     margin: 0;
     padding: 0;
 }
-img {
+#product-image-container{
+    display: flex;
+    flex-direction: column;
+}
+.navigation{
+    display: flex;
+    margin: 25px 0 0 25px;
+}
+.navigation a{
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.navigation a:hover{
+    color: #999;
+}
+.product{
+    display: flex;
+    margin: 25px;
+}
+.product-img{
     width: 400px;
+    margin: 0 25px;
+}
+.small-imgs{
+    display: flex;
+}
+.small-imgs img{
+    width: 120px;
+    height: 140px;
+    margin: 25px 0 25px 22px;
+}
+.product-counter{
+    display: flex;
+    align-items: center;
+}
+.product-counter .increment , .decrement{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30%;
+    background-color: #222;
+    color: #fff;
+}
+.counter{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 25px;
+}
+.add{
+    background: #FBF;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 85px;
 }
