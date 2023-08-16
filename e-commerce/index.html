@@ -154,12 +154,16 @@
                   </a>
                 </div>
                 <div class="cart">
-                  <a href="loginpage.html"><i class="fa-regular fa-user"></i></a>
-                  <i class="fa-regular fa-heart wish--list"></i>
+                  <a href="loginpage.html" class="login-btn"><i class="fa-regular fa-user"></i></a>
+                  <i class="fa-regular fa-heart"></i>
                   <div class="nav-cart">
                     <i class="fa-solid fa-cart-shopping nav--cart"></i>
                     <div class="cart-menu">
                       <div class="nav-cart-product">
+                      </div>
+                      <div class="nav-cart-btns">
+                        <a href="cart.html" class="check-out">check out</a>
+                        <button class="cancel">cancel</button>
                       </div>
                     </div>
                     <div class="icon-text">
@@ -414,8 +418,9 @@
           <div class="container">
             <div class="row">
               <div class="card col" style="width: 18rem;">
+                <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 <a href="product.html?data-image=img/cards/best-1.jpg&data-title=EEZEEY womens Furry&data-price=200">
-                <button class="addToCart" onclick="addToCart()">
+                <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
@@ -434,17 +439,17 @@
                   <h5 class="card-title">EEZEEY womens Furry</h5>
                   <div class="card--bottom">
                     <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   </div>
                 </div>
               </a>
               </div>          
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/best-2.jpg&data-title=Mens Hat&data-price=800">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/best-2.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -460,17 +465,17 @@
                 <h5 class="card-title">Mens Hat</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='800'>800$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/best-3.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/best-3.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -486,17 +491,17 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/best-4.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/best-4.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -512,7 +517,6 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
@@ -520,11 +524,12 @@
             </div>
             <div class="row">
               <div class="card col" style="width: 18rem;">
+                <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 <a href="product.html?data-image=img/cards/best-5.jpg">
-                <!-- <div class="addToCart" onclick="addToCart()">
+                <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
-                  <a href="">add to cart</a>
-                </div> -->
+                  <p>add to cart</p>
+                </button>
                 <img src="img/cards/best-5.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -540,17 +545,17 @@
                   <h5 class="card-title">EEZEEY womens Furry</h5>
                   <div class="card--bottom">
                         <p class="card--price" price-data='200'>200$</p>
-                      <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   </div>
                 </div>
                 </a>
               </div>
               <div class="card col" style="width: 18rem;">
+                <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 <a href="product.html?data-image=img/cards/best-6.jpg">
-                <!-- <div class="addToCart" onclick="addToCart()">
+                <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
-                  <a href="">add to cart</a>
-                </div> -->
+                  <p>add to cart</p>
+                </button>
                 <img src="img/cards/best-6.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -566,17 +571,17 @@
                   <h5 class="card-title">EEZEEY womens Furry</h5>
                   <div class="card--bottom">
                         <p class="card--price" price-data='200'>200$</p>
-                      <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   </div>
                 </div>
                 </a>
               </div>
               <div class="card col" style="width: 18rem;">
+                <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 <a href="product.html?data-image=img/cards/best-7.jpg">
-                <!-- <div class="addToCart" onclick="addToCart()">
+                <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
-                  <a href="">add to cart</a>
-                </div> -->
+                  <p>add to cart</p>
+                </button>
                 <img src="img/cards/best-7.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -592,17 +597,17 @@
                   <h5 class="card-title">EEZEEY womens Furry</h5>
                   <div class="card--bottom">
                         <p class="card--price" price-data='200'>200$</p>
-                      <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   </div>
                 </div>
                 </a>
               </div>
               <div class="card col" style="width: 18rem;">
+                <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 <a href="product.html?data-image=img/cards/best-8.jpg">
-                <!-- <div class="addToCart" onclick="addToCart()">
+                <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
-                  <a href="">add to cart</a>
-                </div> -->
+                  <p>add to cart</p>
+                </button>
                 <img src="img/cards/best-8.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -618,7 +623,6 @@
                   <h5 class="card-title">EEZEEY womens Furry</h5>
                   <div class="card--bottom">
                         <p class="card--price" price-data='200'>200$</p>
-                      <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   </div>
                 </div>
                 </a>
@@ -630,11 +634,12 @@
         <div class="container">
           <div class="row">
                 <div class="card col " style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-1.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-1.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -650,17 +655,17 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                 </a>
                 </div>
                 <div class="card col" style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-2.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-2.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -676,17 +681,17 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                   </a>
                 </div>
                 <div class="card col" style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-3.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-3.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -702,17 +707,17 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                   </a>
                 </div>
                 <div class="card col" style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-4.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-4.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -728,7 +733,6 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                   </a>
@@ -736,11 +740,12 @@
           </div>
           <div class="row">
                 <div class="card col" style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-5.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-5.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -756,17 +761,17 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                 </a>
                 </div>
                 <div class="card col" style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-6.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-6.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -782,17 +787,17 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                   </a>
                 </div>
                 <div class="card col" style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-7.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-7.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -808,17 +813,17 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                   </a>
                 </div>
                 <div class="card col" style="width: 18rem;">
+                  <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                   <a href="product.html?data-image=img/cards/new-8.jpg">
-                  <!-- <div class="addToCart" onclick="addToCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="">add to cart</a>
-                  </div> -->
+                  <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
                   <img src="img/cards/new-8.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -834,7 +839,6 @@
                     <h5 class="card-title">EEZEEY womens Furry</h5>
                     <div class="card--bottom">
                           <p class="card--price" price-data='200'>200$</p>
-                        <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                     </div>
                   </div>
                   </a>
@@ -847,11 +851,12 @@
         <div class="container">
           <div class="row">
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-1.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-1.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -867,17 +872,17 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card  col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-2.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-2.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -893,17 +898,17 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card  col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-3.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-3.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -919,17 +924,17 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card  col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-4.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-4.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -945,7 +950,6 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
@@ -953,11 +957,12 @@
           </div>
           <div class="row">
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-5.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-5.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -973,17 +978,17 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-6.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-6.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -999,17 +1004,17 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-7.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-7.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -1025,17 +1030,17 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>
             </div>
             <div class="card col" style="width: 18rem;">
+              <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
               <a href="product.html?data-image=img/cards/sale-8.jpg">
-              <!-- <div class="addToCart" onclick="addToCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="">add to cart</a>
-              </div> -->
+              <button class="addToCart" onclick="addToCart(event)">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p>add to cart</p>
+                </button>
               <img src="img/cards/sale-8.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -1051,7 +1056,6 @@
                 <h5 class="card-title">EEZEEY womens Furry</h5>
                 <div class="card--bottom">
                       <p class="card--price" price-data='200'>200$</p>
-                    <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
                 </div>
               </div>
               </a>

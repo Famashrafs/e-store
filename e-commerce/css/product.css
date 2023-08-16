@@ -36,6 +36,9 @@
     height: 140px;
     margin: 25px 0 25px 22px;
 }
+.in-stock{
+    color: #1fcb64;
+}
 .product-counter{
     display: flex;
     align-items: center;

@@ -21,6 +21,7 @@ function menuHide(){
 }
 menu.addEventListener("click",menuHide);
 
+
 // add to cart alert 
 let cartTotal=document.querySelector(".cart-total");
 let totalPrice =Number(cartTotal.getAttribute("total-price"));
@@ -28,16 +29,17 @@ let cardPrice=document.querySelector(".card--price");
 let productPrice=Number(cardPrice.getAttribute("price-data"));
 console.log(totalPrice)
 console.log(productPrice)
-function addToCart(){
+function addToCart(event){
+  event.preventDefault()
   const img=document.querySelector(".addToCart").nextElementSibling.src;
   const name=document.querySelector(".addToCart").closest("h5");
   Swal.fire({
   title: 'Are you sure?',
-  text: "adding this product to the cart",
+  text: `adding${name}`,
   imageUrl: `${img}`,
   imageWidth: 275,
   imageHeight: 400,
-  imageAlt: 'Custom image',
+  imageAlt: 'product image',
   showCancelButton: true,
   confirmButtonColor: '#35ad66',
   cancelButtonColor: '#d33',
@@ -58,7 +60,7 @@ let price =window.getComputedStyle(cartTotal ,"::after");
 totalPrice =price.getPropertyValue("content");
 
 // cart menu 
-const navCart=document.querySelector(".nav--cart");
+const navCart=document.querySelector(".nav-cart");
 const cartMenu=document.querySelector(".cart-menu");
 navCart.addEventListener("click",function(){
   if(cartMenu.style.display=="flex"){
@@ -67,6 +69,12 @@ navCart.addEventListener("click",function(){
     cartMenu.style.cssText="display:flex";
   }
 })
+// cart cancel-btn
+// let cancel=document.querySelector(".cancel");
+// cancel.addEventListener("click",function(){
+//   cartMenu.style.cssText="display:none";
+//   console.log("clicked")
+// })
 const productimg=document.querySelector(".card-img-top").src;
 const productName=document.querySelector(".card-title").innerHTML;
 const cartProduct=document.querySelector(".nav-cart-product");
