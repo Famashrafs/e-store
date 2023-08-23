@@ -625,7 +625,7 @@
   var SELECTOR_DATA_SLIDE = '[data-slide], [data-slide-to]';
   var SELECTOR_DATA_RIDE = '[data-ride="carousel"]';
   var Default$7 = {
-    interval: 500000,
+    interval: 5000,
     keyboard: true,
     slide: false,
     pause: 'hover',

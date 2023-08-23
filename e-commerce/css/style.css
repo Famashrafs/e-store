@@ -221,8 +221,7 @@ nav li:hover::after{
     display: none;
     flex-direction: column;
     background-color: #fff;
-    width: 350px;
-    height: 218px;
+    min-width: 350px;
     position: absolute;
     top: 50px;
     right: -100px;
@@ -232,24 +231,57 @@ nav li:hover::after{
 .nav-cart-product{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
 }
 .cart-product-img{
     width: 100px;
     height: 100px;
     margin: 20px;
 }
+.product-info{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
 .cart-product-name{
-    font-size: 18px;
+    font-size: 15px;
     max-width: 100px;
 }
 .cart-product-price{
     margin: 0;
 }
+.product-counter{
+    display: flex;
+    align-items: center;
+}
+.product-counter .increment , .decrement{
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30%;
+    color: #000;
+    width: 40px;
+    height: 50px;
+}
+.counter{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 25px;
+}
+.delete-button{
+    margin: 20px;
+    border: none;
+    background: none;
+}
+.delete-button i{
+    padding: 0;
+    border: none;
+    color: #cf2f2f;
+}
 .nav-cart-btns{
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0px;
     width: 100%;
     height: 45px;
 }
@@ -1012,4 +1044,19 @@ footer a:hover{
 .copyRight p{
     margin: 0 10px;
 }
+#moveToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 50%;
+}
+#moveToTopButton i{
+    font-size: 30px;
+  }
 /* end cobyright */

@@ -159,7 +159,8 @@
                   <div class="nav-cart">
                     <i class="fa-solid fa-cart-shopping nav--cart"></i>
                     <div class="cart-menu">
-                      <div class="nav-cart-product">
+                      <div class="nav-cart-products">
+                        <div class="nav-cart-product"></div>
                       </div>
                       <div class="nav-cart-btns">
                         <a href="cart.html" class="check-out">check out</a>
@@ -168,7 +169,7 @@
                     </div>
                     <div class="icon-text">
                       <div class="mini-text">Total</div>
-                      <div class="cart-total" total-price="0">$</div>
+                      <div class="cart-total">$0</div>
                     </div>
                   </div>
                 </div>
@@ -419,11 +420,11 @@
             <div class="row">
               <div class="card col" style="width: 18rem;">
                 <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                <a href="product.html?data-image=img/cards/best-1.jpg&data-title=EEZEEY womens Furry&data-price=200">
-                <button class="addToCart" onclick="addToCart(event)">
+                <button class="addToCart" onclick="addToCart(event)" id="1">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                <a href="product.html?data-image=img/cards/best-1.jpg&data-title=EEZEEY womens Furry&data-price=200&data-product-id=1">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
                 <div class="card-body">
@@ -445,11 +446,11 @@
               </div>          
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/best-2.jpg&data-title=Mens Hat&data-price=800">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/best-2.jpg&data-title=Mens Hat&data-price=800&data-product-id=2" id="2">
               <img src="img/cards/best-2.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -471,11 +472,11 @@
             </div>
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/best-3.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/best-3.jpg" id="3">
               <img src="img/cards/best-3.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -497,11 +498,11 @@
             </div>
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/best-4.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/best-4.jpg" id="4">
               <img src="img/cards/best-4.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -525,11 +526,11 @@
             <div class="row">
               <div class="card col" style="width: 18rem;">
                 <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                <a href="product.html?data-image=img/cards/best-5.jpg">
                 <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                <a href="product.html?data-image=img/cards/best-5.jpg" id="5">
                 <img src="img/cards/best-5.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -551,11 +552,11 @@
               </div>
               <div class="card col" style="width: 18rem;">
                 <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                <a href="product.html?data-image=img/cards/best-6.jpg">
                 <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                <a href="product.html?data-image=img/cards/best-6.jpg" id="6">
                 <img src="img/cards/best-6.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -577,11 +578,11 @@
               </div>
               <div class="card col" style="width: 18rem;">
                 <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                <a href="product.html?data-image=img/cards/best-7.jpg">
                 <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                <a href="product.html?data-image=img/cards/best-7.jpg" id="7">
                 <img src="img/cards/best-7.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -603,11 +604,11 @@
               </div>
               <div class="card col" style="width: 18rem;">
                 <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                <a href="product.html?data-image=img/cards/best-8.jpg">
                 <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                <a href="product.html?data-image=img/cards/best-8.jpg" id="8">
                 <img src="img/cards/best-8.jpg" class="card-img-top" alt="...">
                 <!-- <div class="new">new</div> -->
                 <!-- <div class="discount">30%</div> -->
@@ -635,11 +636,11 @@
           <div class="row">
                 <div class="card col " style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-1.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-1.jpg" id="9">
                   <img src="img/cards/new-1.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -661,11 +662,11 @@
                 </div>
                 <div class="card col" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-2.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-2.jpg" id="10">
                   <img src="img/cards/new-2.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -687,11 +688,11 @@
                 </div>
                 <div class="card col" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-3.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-3.jpg" id="11">
                   <img src="img/cards/new-3.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -713,11 +714,11 @@
                 </div>
                 <div class="card col" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-4.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-4.jpg" id="12">
                   <img src="img/cards/new-4.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -741,11 +742,11 @@
           <div class="row">
                 <div class="card col" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-5.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-5.jpg" id="13">
                   <img src="img/cards/new-5.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -767,11 +768,11 @@
                 </div>
                 <div class="card col" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-6.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-6.jpg" id="14">
                   <img src="img/cards/new-6.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -793,11 +794,11 @@
                 </div>
                 <div class="card col" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-7.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-7.jpg" id="15">
                   <img src="img/cards/new-7.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -819,11 +820,11 @@
                 </div>
                 <div class="card col" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/new-8.jpg">
                   <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+                  <a href="product.html?data-image=img/cards/new-8.jpg" id="16">
                   <img src="img/cards/new-8.jpg" class="card-img-top" alt="...">
                   <!-- <div class="new">new</div> -->
                   <!-- <div class="discount">30%</div> -->
@@ -852,11 +853,11 @@
           <div class="row">
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-1.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-1.jpg" id="17">
               <img src="img/cards/sale-1.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -878,11 +879,11 @@
             </div>
             <div class="card  col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-2.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-2.jpg" id="18">
               <img src="img/cards/sale-2.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -904,11 +905,11 @@
             </div>
             <div class="card  col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-3.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-3.jpg" id="19">
               <img src="img/cards/sale-3.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -930,11 +931,11 @@
             </div>
             <div class="card  col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-4.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-4.jpg" id="20">
               <img src="img/cards/sale-4.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -958,11 +959,11 @@
           <div class="row">
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-5.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-5.jpg" id="21">
               <img src="img/cards/sale-5.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -984,11 +985,11 @@
             </div>
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-6.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-6.jpg" id="22">
               <img src="img/cards/sale-6.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -1010,11 +1011,11 @@
             </div>
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-7.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-7.jpg" id="23">
               <img src="img/cards/sale-7.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -1036,11 +1037,11 @@
             </div>
             <div class="card col" style="width: 18rem;">
               <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-              <a href="product.html?data-image=img/cards/sale-8.jpg">
               <button class="addToCart" onclick="addToCart(event)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p>add to cart</p>
                 </button>
+              <a href="product.html?data-image=img/cards/sale-8.jpg" id="24">
               <img src="img/cards/sale-8.jpg" class="card-img-top" alt="...">
               <!-- <div class="new">new</div> -->
               <!-- <div class="discount">30%</div> -->
@@ -1154,6 +1155,7 @@
     <p>made by Fam Ashraf</p>
     <i class="fa-regular fa-copyright"></i>
   </div>
+  <button id="moveToTopButton"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- end footer -->
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/bootstrap.js"></script>
