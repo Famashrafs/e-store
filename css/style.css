@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Blinker:wght@700&family=Montserrat:wght@700&family=Raleway:wght@700&family=Tangerine&display=swap');
 body {
     background-color:hsl(0 0% 50% / 0.1);
 }
@@ -93,7 +94,7 @@ nav li:hover::after{
     display: none;
     cursor: pointer;
 }
-.mobileMenu{
+.mobile-menu{
  display: flex;
 }
 .dropdown--menu{
@@ -107,7 +108,7 @@ nav li:hover::after{
     padding: 10px;
     background:#fff;
 }
-.women--list:hover  .dropdown--menu{
+.women-list:hover  .dropdown--menu{
     display: flex;
     transition: all .5s;
 }
@@ -172,13 +173,13 @@ nav li:hover::after{
     text-decoration: none;
 }
 /* search box */
-.search--box{
+.search-box{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
 }
-.search--txt{
+.search-txt{
     background: #fff;
     border: none;
     padding: 5px 15px;
@@ -186,10 +187,10 @@ nav li:hover::after{
     width: 200px;
     border-radius: 10px;
 }
-.search--box a {
+.search-box a {
     margin-left: -35px;
 }
-.search--box a i{
+.search-box a i{
     font-size: 20px;
     color: #020306;
     line-height: 2;
@@ -454,7 +455,7 @@ nav li:hover::after{
     border-radius: 19% 81% 69% 31% / 53% 29% 71% 47%;
     
 }
-.fashion--line1{
+.fashion-line1{
     position: absolute;
     top: 245px;
     left: 120px;
@@ -468,7 +469,7 @@ nav li:hover::after{
     width: 500px;
     height: 500px;
 }
-.fashion--line2{
+.fashion-line2{
     position: absolute;
     top: 5px;
     right: 75px;
@@ -477,7 +478,7 @@ nav li:hover::after{
     background-color: #d829cf;
     z-index: -1;
 }
-.fashion--line3{
+.fashion-line3{
     position: absolute;
     bottom: 18px;
     right: 495px;
@@ -631,10 +632,10 @@ nav li:hover::after{
     color: #fff;
     height: 60vh;
 }
-.ads--content{
+.ads-content{
     position: relative;
 }
-.ads--content h1{
+.ads-content h1{
     margin-top: 25px;
     font-family: 'Montserrat', sans-serif;
     font-size: 72px;
@@ -643,7 +644,7 @@ nav li:hover::after{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.ads--content h2{
+.ads-content h2{
     font-family: 'Bangers', cursive;
     font-size: 52px;
     background: -webkit-linear-gradient(0deg,#b441c9, #5589e0);
@@ -652,16 +653,16 @@ nav li:hover::after{
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
-.ads--content h3{
+.ads-content h3{
     font-size: 62px;
     font-family: 'Blinker', sans-serif;
     font-weight: lighter;
     letter-spacing: 1px;
 }
-.ads--content div {
+.ads-content div {
     border-left: 5px solid #1767e9;
 }
-.ads--content button{
+.ads-content button{
     background: linear-gradient(45deg, #9a55cf, #697bdc);
     border: none;
     border-radius: 20px;
@@ -672,11 +673,11 @@ nav li:hover::after{
     bottom: 10%;
     left: 55%;
 }
-.ads--content div{
+.ads-content div{
     margin-left: 10px;
     padding-left: 5px;
 }
-.ads--img img{
+.ads-img img{
     width: 350px;
     filter: drop-shadow(-35px 0px 28px #b441c9) drop-shadow(-35px -20px 15px #fff) drop-shadow(20px -20px 20px #b441c9);
     margin-top: 100px;
@@ -725,6 +726,10 @@ display: flex;
 }
 /* end brands */
 /* start cards */
+.col-lg-2 {
+    flex: 0 0 22.666667%;
+    max-width: 25.666667%;
+}
 .tabs__panels .container{
     max-width: 2000px;
     padding: 0;
@@ -768,6 +773,7 @@ display: flex;
 .card a{
     color: #000;
     text-decoration: none;
+    width: 100%;
 }
 .addToCart{
     display: none;
@@ -819,7 +825,6 @@ display: flex;
 }
 .card img{
     height: 425px;
-    width: 298px;
 }
 .card-body{
     align-items: flex-start;
@@ -933,7 +938,6 @@ display: flex;
 .subscribe{
     position: relative;
     width: 100%;
-    height: 45vh;
     background-color: #ddd;
     display: flex;
     flex-direction: column;
@@ -958,15 +962,14 @@ form{
 .subscribe input[type ="button"]{
     background: #222;
     color: #fff;
-    border-radius: 15px;
+    border-radius: 0px 25px 25px 0px;
     padding: 10px 20px;
 }
 .subscribe input[type ="email"]{
     width: 400px;
     height: 50px;
     border: none;
-    margin-right: 40px;
-    border-radius: 10px;
+    border-radius: 25px 0px 0px 25px;
     padding: 10px 20px;
 }
 
@@ -974,7 +977,6 @@ form{
 /* start footer */
 footer{
     width: 100%;
-    height: 60vh;
     background-color: #000000db;
     color: #fff;
     display: flex;

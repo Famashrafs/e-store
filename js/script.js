@@ -13,17 +13,53 @@
 
 
   let nav= document.querySelector("nav"),
-      navUl= document.querySelector("ul"),
       menu=document.querySelector(".menu");
 function menuHide(){
-  nav.classList.toggle("mobileHide")
-  navUl.classList.toggle("mobileMenu")
+  nav.classList.toggle("mobile-menu")
+  console.log(menu)
 }
 menu.addEventListener("click",menuHide);
 
 
+// Retrieve cart items from local storage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-const cart = [];
+// Function to calculate the total price
+function calculateTotalPrice() {
+  let total = 0;
+
+  for (const item of cart) {
+    const productPrice = parseInt(item.productPrice);
+    const quantity = item.quantity;
+    total += productPrice * quantity;
+  }
+
+  return total;
+} 
+
+// Function to calculate the total number of products
+function calculateTotalProducts() {
+  let totalProducts = 0;
+
+  for (const item of cart) {
+    totalProducts += item.quantity;
+  }
+
+  return totalProducts;
+}
+
+// Function to save the cart to local storage
+function saveCartToLocalStorage() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Function to load the cart from local storage
+function loadCartFromLocalStorage() {
+  cart = JSON.parse(localStorage.getItem('cart')) || [];
+  updateCartMenu();
+}
+// Call the function to load the cart from local storage when the page loads
+loadCartFromLocalStorage();
 
 function totalP() {
   let total = 0;
@@ -72,7 +108,6 @@ function addToCart(event) {
     cart.push(newProduct);
   }
 
-  console.log(cart);
 
   // Update the cart menu
   updateCartMenu();
@@ -81,6 +116,9 @@ function addToCart(event) {
   const totalPrice = totalP();
   const totalPriceElement = document.querySelector('.cart-total');
   totalPriceElement.innerHTML = `$${totalPrice}`;
+
+    // Save the cart to local storage
+    saveCartToLocalStorage();
 }
 
 function updateCartMenu() {
@@ -152,6 +190,8 @@ function updateCartMenu() {
         const totalPriceElement = document.querySelector('.cart-total');
         totalPriceElement.innerHTML = `$${totalPrice}`;
       }
+        // Save the cart to local storage
+        saveCartToLocalStorage();
     }
 
     const deleteButton = document.createElement('button');
@@ -164,6 +204,15 @@ function updateCartMenu() {
       deleteCartItem(item.productId);
     });
   }
+  const totalPrice = calculateTotalPrice();
+  const totalPriceElement = document.querySelector('.cart-total');
+  totalPriceElement.innerHTML = `$${totalPrice}`;
+
+  const totalProducts = calculateTotalProducts();
+  
+    // Save the total price and total products to local storage
+    localStorage.setItem('totalPrice', totalPrice);
+    localStorage.setItem('totalProducts', totalProducts);
 }
 
 function incrementButton(event) {
@@ -174,6 +223,8 @@ function incrementButton(event) {
   const totalPrice = totalP();
   const totalPriceElement = document.querySelector('.cart-total');
   totalPriceElement.innerHTML = `$${totalPrice}`;
+    // Save the cart to local storage
+    saveCartToLocalStorage();
 }
 
 function decrementButton(event) {
@@ -186,6 +237,13 @@ function decrementButton(event) {
     const totalPriceElement = document.querySelector('.cart-total');
     totalPriceElement.innerHTML = `$${totalPrice}`;
   }
+    // Save the cart to local storage
+    saveCartToLocalStorage();
+}
+// Function to handle adding a new product to the cart
+function addProductToCart(product) {
+  cart.push(product);
+  updateCartMenu();
 }
 
 // toggle cart menu 
@@ -342,3 +400,6 @@ moveToTopButton.addEventListener('click', moveToTop);
 // })
 // totalPrice+=productPrice;
 // localStorage.setItem("totalPrice",totalPrice);
+
+
+
