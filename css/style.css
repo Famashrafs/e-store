@@ -639,10 +639,10 @@ nav li:hover::after{
     margin-top: 25px;
     font-family: 'Montserrat', sans-serif;
     font-size: 72px;
-    background: -webkit-linear-gradient(0deg,#b441c9, #5589e0);
+    /* background: -webkit-linear-gradient(0deg,#b441c9, #5589e0);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 }
 .ads-content h2{
     font-family: 'Bangers', cursive;
