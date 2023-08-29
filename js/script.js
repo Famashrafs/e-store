@@ -10,8 +10,7 @@
 
 
 
-
-
+// mobile menu
   let nav= document.querySelector("nav"),
       menu=document.querySelector(".menu");
 function menuHide(){
@@ -20,6 +19,29 @@ function menuHide(){
 }
 menu.addEventListener("click",menuHide);
 
+// toggle cart menu 
+const navCart = document.querySelector(".nav-cart");
+const cartMenu = document.querySelector(".cart-menu");
+// Add event listener to the cart icon
+navCart.addEventListener("click", function(event) {
+  const isButton = event.target.nodeName === 'BUTTON';
+  const isInsideCartMenu = cartMenu.contains(event.target);
+
+  if (!isButton && !isInsideCartMenu) {
+    if (cartMenu.style.display === "flex") {
+      cartMenu.style.display = "none";
+    } else {
+      cartMenu.style.display = "flex";
+    }
+  }
+});
+
+// cart cancel-btn
+let cancel=document.querySelector(".cancel");
+cancel.addEventListener("click",function(){
+  cartMenu.style.cssText="display:none";
+  console.log("clicked")
+})
 
 // Retrieve cart items from local storage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -209,7 +231,10 @@ function updateCartMenu() {
   totalPriceElement.innerHTML = `$${totalPrice}`;
 
   const totalProducts = calculateTotalProducts();
-  
+
+    // adding notification 
+    navCart.setAttribute("notification",totalProducts)
+    
     // Save the total price and total products to local storage
     localStorage.setItem('totalPrice', totalPrice);
     localStorage.setItem('totalProducts', totalProducts);
@@ -245,33 +270,6 @@ function addProductToCart(product) {
   cart.push(product);
   updateCartMenu();
 }
-
-// toggle cart menu 
-const navCart = document.querySelector(".nav-cart");
-const cartMenu = document.querySelector(".cart-menu");
-
-// Add event listener to the cart icon
-navCart.addEventListener("click", function(event) {
-  const isButton = event.target.nodeName === 'BUTTON';
-  const isInsideCartMenu = cartMenu.contains(event.target);
-
-  if (!isButton && !isInsideCartMenu) {
-    if (cartMenu.style.display === "flex") {
-      cartMenu.style.display = "none";
-    } else {
-      cartMenu.style.display = "flex";
-    }
-  }
-});
-
-
-// cart cancel-btn
-let cancel=document.querySelector(".cancel");
-cancel.addEventListener("click",function(){
-  cartMenu.style.cssText="display:none";
-  console.log("clicked")
-})
-
 // add to wish list icon
 function addToFav(event) {
   let wishList = event.target;

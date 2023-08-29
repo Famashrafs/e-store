@@ -158,13 +158,65 @@
       <p>/</p>
       <a href="product.html">Product Name</a>
     </div>
-    <div class="product">
+    <!-- <div class="product">
       <div id="product-image-container">
         <img src="img/cards/best-1.jpg" class=" img product-img" alt="product">
         <div class="small-imgs">
           <img src="img/cards/best-1.jpg" class=" img small-img1" alt="small product image">
           <img src="img/cards/best-1.jpg" class=" img small-img2" alt="small product image">
           <img src="img/cards/best-1.jpg" class=" img small-img3" alt="small product image">
+        </div>
+      </div>
+
+      </div>
+
+    </div> -->
+    <div class = "card-wrapper">
+      <div class = "product">
+        <!-- card left -->
+        <div class = "product-imgs">
+          <div class = "img-display">
+            <div class = "img-showcase">
+              <a data-fslightbox href = "img/cards/best-1.jpg">
+                <img src = "img/cards/best-1.jpg" class="product-img" alt = "shoe image">
+              </a>
+              <a data-fslightbox href = "img/cards/best-12.jpg">
+                <img src = "img/cards/best-12.jpg" class="product-img" alt = "shoe image">
+              </a>
+              <a data-fslightbox href = "img/cards/best-13.jpg">
+                <img src = "img/cards/best-13.jpg" class="product-img" alt = "shoe image">
+              </a>
+              <a data-fslightbox href = "img/cards/best-14.jpg">
+                <img src = "img/cards/best-14.jpg" class="product-img" alt = "shoe image">
+              </a>
+              <!-- <img src = "img/cards/best-1.jpg" class="product-img"  alt = "image"> -->
+              <!-- <img src = "img/cards/best-12.jpg" class="product-img"  alt = "image">
+              <img src = "img/cards/best-13.jpg" class="product-img"  alt = "image">
+              <img src = "img/cards/best-14.jpg"  class="product-img" alt = "image"> -->
+            </div>
+          </div>
+          <div class = "img-select">
+            <div class = "img-item">
+              <a href = "#" data-id = "1">
+                <img src = "img/cards/best-1.jpg" class="small-img1" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "2">
+                <img src = "img/cards/best-12.jpg" class="small-img2" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "3">
+                <img src = "img/cards/best-13.jpg" class="small-img3" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "4">
+                <img src = "img/cards/best-14.jpg" class="small-img4" alt = "shoe image">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="product-info">
@@ -202,8 +254,6 @@
           <p>add to cart</p>
         </button>
       </div>
-      </div>
-
     </div>
     <script>
         // Retrieve the product data URL from the data attribute of the anchor tag on the previous page
@@ -211,9 +261,10 @@
         const productImage = searchParams.get('data-image');
         const productTitle = searchParams.get('data-title');
         const productPrice = searchParams.get('data-price');
-        const img1=`${productImage}`;
-        const img2=`${productImage}`;
-        const img3=`${productImage}`;
+        const img1=`img/cards/best-1.jpg`;
+        const img2=`img/cards/best-12.jpg`;
+        const img3=`img/cards/best-13.jpg`;
+        const img4=`img/cards/best-14.jpg`;
         // Display the product data on the page
         const productImageContainer = document.getElementById('product-image-container');
         const smallImgContainer = document.querySelector('.small-imgs');
@@ -221,6 +272,7 @@
         const imgElement1 = document.querySelector('.small-img1');
         const imgElement2 = document.querySelector('.small-img2');
         const imgElement3 = document.querySelector('.small-img3');
+        const imgElement4 = document.querySelector('.small-img4');
         document.querySelector(".product-title").innerHTML=productTitle;
         document.querySelector(".product-price").innerHTML=`$${productPrice}`;
         if(productImage == null && productTitle == null && productPrice == null){
@@ -228,6 +280,7 @@
           imgElement1.src = 'img/hide.png';
           imgElement2.src = 'img/hide.png';
           imgElement3.src = 'img/hide.png';
+          imgElement4.src = 'img/hide.png';
           document.querySelector(".product-title").innerHTML='product Name';
           document.querySelector(".product-price").innerHTML='product Price';
         }else{
@@ -235,6 +288,7 @@
           imgElement1.src = img1;
           imgElement2.src = img2;
           imgElement3.src = img3;
+          imgElement4.src = img4;
         }
         let incrementButton = document.getElementById("increment");
         let decrementButton = document.getElementById("decrement");
@@ -254,9 +308,29 @@
             }
           counter.textContent = count;
         });
+        const imgs = document.querySelectorAll('.img-select a');
+        const imgBtns = [...imgs];
+        let imgId = 1;
+
+        imgBtns.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage();
+            });
+        });
+
+        function slideImage(){
+            const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+
+        window.addEventListener('resize', slideImage);
       </script>
-      <script src="js/script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
       <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/script.js"></script>
       <script src="https://kit.fontawesome.com/7bed3c335a.js" crossorigin="anonymous"></script>
 </body>
 </html>

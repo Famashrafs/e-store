@@ -215,7 +215,22 @@ nav li:hover::after{
 .nav-cart .icon-text{
     font-weight: bold;
     font-size: 14px;
-    margin-left: 10px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.nav-cart::after{
+    content: attr(notification);
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f13939;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 13px;
     cursor: pointer;
 }
 .cart-menu{
@@ -639,10 +654,10 @@ nav li:hover::after{
     margin-top: 25px;
     font-family: 'Montserrat', sans-serif;
     font-size: 72px;
-    /* background: -webkit-linear-gradient(0deg,#b441c9, #5589e0);
+    background: -webkit-linear-gradient(0deg,#b441c9, #5589e0);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
 .ads-content h2{
     font-family: 'Bangers', cursive;
