@@ -50,7 +50,7 @@
 		display: none;
 	}
 	.cart-menu{
-		width: 365px;
+		width: 420px;
 		right: -65px;
 	}
 	.search-box{
@@ -240,7 +240,7 @@
 		text-align: center;
 	}
 	form{
-	    flex-direction: column;	
+		flex-direction: column;
 	}
 	.subscribe input[type ="email"]{
 		width: 340px;
@@ -261,11 +261,35 @@
 	.address{
 		width: 270px;
 	}
+	/* product page */
+	.card-wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.product-info{
+		margin: 0px 30px;
+	}
+	.add{
+		padding: 10px 12px;
+		width: 130px;
+	}
+	/* cart page */
+	.bag{
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.payment{
+		width: 55%;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 /*extra small screen*/
 
 @media (min-width:481px)and (max-width:767px){
-    
 	.header-top{
 		display: flex;
 		margin-bottom: 15px;
@@ -491,16 +515,96 @@
 	.address{
 		width: 270px;
 	}
-    
+	/* cart page */
+	.bag{
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.payment{
+		width: 65%;
+		flex-direction: column;
+		align-items: center;
+		font-size: 20px;
+	}
+	/* check out page */
+	.user-info{
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.card-info{
+		margin: 50px 50px 15px 50px;
+	}
+	form{
+		margin-bottom: 40px;
+	}
 }
 /*small tablets md-screen*/
 
 @media (min-width:768px)and (max-width:991px){
+	.header-top{
+		display: flex;
+		margin-bottom: 15px;
+		background: #000000db;
+		padding: 10px 15px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.container{
+		padding: 0;
+		margin: 0;
+	}
 	.header-bottom{
-		font-size: 15px;
-	} 
-	.women-list{
-		width: 75px;
+		position: relative;
+		margin-bottom: 60px;
+		justify-content: space-evenly;
+	}
+	.menu{
+		display: block;
+	}
+	.mobile-menu ul{
+		flex-direction: column;
+		z-index: 1000;
+		background: #fff;
+		top: 60px;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.mobile-menu ul li{
+		padding: 10px;
+		margin: 20px 0;
+	}
+	.mobile-menu ul li:hover{
+		padding-left: 20px;
+		background-color: #222;
+		color: #fff;
+		transition: all .5s;
+	}
+	.mobile-menu ul li:hover::after{
+		content: unset;
+	}
+	nav{
+		display: none;
+	}
+	.cart-menu{
+		width: 420px;
+		right: -65px;
+	}
+	.search-box{
+		position: absolute;
+		top: 61px;
+		display: flex;
+		align-items: center;
+		background: #222;
+		width: 100%;
+		z-index: 100;
+	}
+	.search-txt{
+		width: 320px;
 	}
 }
 
