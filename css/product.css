@@ -50,6 +50,11 @@
     height: 0;
     top: 0;
 }
+.product-size{
+    position: relative;
+    margin-bottom: 25px;
+    padding-top: 30px;
+}
 .product-size input{
     position: absolute;
     height: 0;
@@ -82,7 +87,7 @@
     display: flex;
     align-items: center;
 }
-.product-counter .increment , .decrement{
+.product-counter .increment-product , .decrement-product{
     font-size: 25px;
     font-weight: bold;
     padding: 0px 10px;

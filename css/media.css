@@ -93,6 +93,10 @@
 	}
 	.slide-1 img{
 		width: 350px;
+		animation: none;
+		position: relative;
+		top: 0;
+		left: 0;
 	}
 	.fashion-line1,.fashion-line2,.fashion-line3{
 		display: none;

@@ -192,10 +192,6 @@
               <a data-fslightbox href = "img/cards/best-14.jpg">
                 <img src = "img/cards/best-14.jpg" class="product-img" alt = "shoe image">
               </a>
-              <!-- <img src = "img/cards/best-1.jpg" class="product-img"  alt = "image"> -->
-              <!-- <img src = "img/cards/best-12.jpg" class="product-img"  alt = "image">
-              <img src = "img/cards/best-13.jpg" class="product-img"  alt = "image">
-              <img src = "img/cards/best-14.jpg"  class="product-img" alt = "image"> -->
             </div>
           </div>
           <div class = "img-select">
@@ -255,9 +251,9 @@
         <label for="43" class="circle size-43">43</label>
       </div>
       <div class="product-counter">
-        <button id="decrement" class="decrement">-</button>
+        <button id="decrement" class="decrement-product">-</button>
         <div id="counter" class="counter">0</div>
-        <button id="increment" class="increment">+</button>
+        <button id="increment" class="increment-product">+</button>
         <button class="add" onclick="addToCart(event)" id="1">
           <i class="fa-solid fa-cart-shopping"></i>
           <p>add to cart</p>
@@ -268,7 +264,7 @@
       </div>
       <div class="wishlist-share">
         <div class="wishlist">
-          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-heart" onclick="addToFav(event)"></i>
           <p>WISHLIST</p>
         </div>
         <div class="wishlist">
@@ -375,14 +371,18 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>   
+          </ol>
           <!-- Wrapper for carousel items -->
           <div class="carousel-inner">
             <div class="item carousel-item active">
               <div class="row">
                 <div class="card col-sm-5 col-md-6 col-lg-2" style="width: 18rem;">
                   <i class=" fa-heart wish--list fa-regular" added="add to favorite" onclick="addToFav(event)"></i>
-                  <a href="product.html?data-image=img/cards/best-4.jpg" id="3">
+                  <button class="addToCart" onclick="addToCart(event)">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>add to cart</p>
+                  </button>
+                  <a href="product.html?data-image=img/cards/best-4.jpg&data-title=Black bag&data-price=150&data-product-id=4">
                   <img src="img/cards/best-4.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <div class="rating">
@@ -733,17 +733,17 @@
           imgElement3.src = img3;
           imgElement4.src = img4;
         }
-        let incrementButton = document.getElementById("increment");
-        let decrementButton = document.getElementById("decrement");
+        let productIncrementButton = document.getElementById("increment-product");
+        let productDecrementButton = document.getElementById("decrement-product");
         let counter = document.getElementById("counter");
         let count = 0;
 
-        incrementButton.addEventListener("click", function () {
+        productIncrementButton.addEventListener("click", function () {
           count++;
           counter.textContent = count;
         });
 
-        decrementButton.addEventListener("click", () => {
+        productDecrementButton.addEventListener("click", () => {
             if(count > 0){
             count--;
             }else{
@@ -768,8 +768,26 @@
 
             document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
         }
-
         window.addEventListener('resize', slideImage);
+
+        const imgItems = document.getElementsByClassName('img-item');
+        const imgShowcase = document.querySelector('.img-showcase img');
+
+          // Add click event listener to each img-select item
+          for (let i = 0; i < imgItems.length; i++) {
+            imgItems[i].addEventListener('click', function(event) {
+              event.preventDefault(); // Prevent the default click behavior
+
+              // Get the data-id attribute value of the clicked item
+              const dataId = this.querySelector('a').getAttribute('data-id');
+
+              // Get the corresponding image source from the data-id value
+              const imgSrc = document.querySelector(`.product-img[data-id="${dataId}"]`).getAttribute('src');
+
+              // Update the src attribute of the img-showcase image
+              imgShowcase.setAttribute('src', imgSrc);
+            });
+  }
         // rating scale
          // Select all elements with the "i" tag and store them in a NodeList called "stars"
         const stars = document.querySelectorAll(".stars i");

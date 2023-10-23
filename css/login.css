@@ -47,6 +47,7 @@ background-image:linear-gradient(to bottom, rgb(3 57 103), #256c96);
     border-radius: 25px;
     top: 65px;
     right: 135px;
+    cursor: pointer;
 }
 .toggle{
     background: transparent;

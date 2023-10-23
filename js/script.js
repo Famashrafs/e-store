@@ -1,15 +1,18 @@
-// start changing page mode
-// let mode=document.querySelector(".mode");
-// let button=document.querySelector(".button");
-// let body=document.querySelector("body");
-// mode.addEventListener("click",function changingMode(){
-//     button.classList.toggle("night--button")
-//     mode.classList.toggle("night--mode")
-//     body.classList.toggle("night")
-// })
-
-
-
+// animation while scrolling
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
 // mobile menu
   let nav= document.querySelector("nav"),
       menu=document.querySelector(".menu");
@@ -19,7 +22,7 @@ function menuHide(){
 }
 menu.addEventListener("click",menuHide);
 
-// toggle cart menu 
+// toggle cart menu
 const navCart = document.querySelector(".nav-cart");
 const cartMenu = document.querySelector(".cart-menu");
 // Add event listener to the cart icon
@@ -57,7 +60,7 @@ function calculateTotalPrice() {
   }
 
   return total;
-} 
+}
 
 // Function to calculate the total number of products
 function calculateTotalProducts() {
@@ -98,7 +101,6 @@ function totalP() {
 }
 function addToCart(event) {
   event.preventDefault();
-
   const clickedButton = event.target;
   const productUrl =
     clickedButton.nodeName === 'BUTTON'
@@ -199,14 +201,12 @@ function updateCartMenu() {
     function deleteCartItem(productId) {
       // Find the index of the cart item with the matching productId
       const index = cart.findIndex((item) => item.productId === productId);
-    
+
       if (index !== -1) {
         // Remove the cart item from the cart array
         cart.splice(index, 1);
-    
         // Update the cart menu
         updateCartMenu();
-    
         // Update the total price
         const totalPrice = totalP();
         const totalPriceElement = document.querySelector('.cart-total');
@@ -232,9 +232,8 @@ function updateCartMenu() {
 
   const totalProducts = calculateTotalProducts();
 
-    // adding notification 
+    // adding notification
     navCart.setAttribute("notification",totalProducts)
-    
     // Save the total price and total products to local storage
     localStorage.setItem('totalPrice', totalPrice);
     localStorage.setItem('totalProducts', totalProducts);
@@ -284,8 +283,8 @@ function addToFav(event) {
 
 // start tabs
 const tabsContainer = document.querySelector(".tabs-container");
-const tabsList = tabsContainer.querySelector("ul");
-const tabButtons = tabsList.querySelectorAll("a");
+const tabsList = tabsContainer.querySelector(".ul");
+const tabButtons = tabsList.querySelectorAll(".ul a");
 const tabPanels = tabsContainer.querySelectorAll(".tabs__panels > div");
 
 tabsList.setAttribute("role", "tablist");
