@@ -1,0 +1,112 @@
+.user-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: linear-gradient(101deg, #3598cfde, #0067ffba);
+    padding: 35px;
+    height: 457px;
+    border-radius: 20px;
+}
+form input{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+.selection{
+    display: flex;
+}
+.selection select{
+    margin-right: 20px;
+    border-radius: 10px;
+}
+label{
+    margin: 20px 20px 20px 0 ;
+}
+input[type=submit]{
+    background: #0b29c3;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+}
+.card-info{
+    position: relative;
+    background-color: #0a7cbb;
+    width: 380px;
+    height: 240px;
+    margin: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.row-one{
+    display: flex;
+    justify-content: space-between;
+}
+.row-two{
+    width: 50px;
+}
+.row-three{
+    text-align: center;
+    margin-top: 15px;
+}
+.row-four{
+    display: flex;
+    justify-content: center;
+}
+.row-four .vaild{
+    max-width: 20px;
+    margin-right: 16px;
+    line-height: 1;
+    font-size: 12px;
+}
+.flip{
+    transform: rotateY(180deg);
+    transition: all 1s;
+}
+.flipBack{
+    transform: rotateY(0deg);
+    transition: all 1s;
+}
+.card-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a7cbb;
+    border-radius: 20px;
+    transition: all 1s;
+    display: none;
+}
+.black-line{
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    display: block;
+    top: 25px;
+}
+.white-line{
+    background: #fff;
+    position: absolute;
+    width: 60%;
+    height: 25%;
+    display: block;
+    top: 100px;
+    right: 0;
+}
+.cvv-container{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    transform: rotateY(180deg);
+}
