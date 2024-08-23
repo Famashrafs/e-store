@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <title>Login</title>
+</head>
+<body>
+    <!-- start background -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+        <defs>
+            <linearGradient id="bg">
+                <stop offset="0%" style="stop-color: rgb(42, 9, 41)"></stop>
+                <stop offset="50%" style="stop-color:rgb(105 , 36 , 108)"></stop>
+                <stop offset="100%" style="stop-color:rgb(0, 0 ,0)"></stop>
+            </linearGradient>
+            <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0 s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+        </defs>
+        <g>
+            <use xlink:href='#wave' opacity=".3">
+                <animateTransform attributeName="transform" attributeType="XML" type="translate" dur="10s" calcMode="spline" values="270 230; -334 180; 270 230" keyTimes="0; .5; 1" keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
+            </use>
+            <use xlink:href='#wave' opacity=".6">
+                <animateTransform attributeName="transform" attributeType="XML" type="translate" dur="8s" calcMode="spline" values="-270 230;243 220;-270 230" keyTimes="0; .6; 1" keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
+            </use>
+            <use xlink:href='#wave' opacity=".9">
+                <animateTransform attributeName="transform" attributeType="XML" type="translate" dur="6s" calcMode="spline" values="0 230;-140 200;0 230" keyTimes="0; .4; 1" keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
+            </use>
+        </g>
+    </svg>
+    <!-- end background -->
+
+    <!-- start login -->
+    <div class="login-body">
+        <div class="login-background">
+            <a href="index.html"><img src="./img/logoWhite.png" alt=""></a>
+        </div>
+        <div class="switch-btn" onclick="toggleLoginSignUp()">
+            <div class="toggle"></div>
+            <img src="./img/sign-in.png" alt="sign in" class="signin-logo">
+            <img src="./img/sign-up.png" alt="sign up" class="signup-logo">
+        </div>
+        <div class="switch switch-log-in">
+            <form action="index.html" class="login">
+                <h1>Login</h1>
+                <input type="email" placeholder="Email" class="email">
+                <div class="password">
+                    <input type="password" class="passcode" placeholder="Password">
+                    <div class="passwordIcon show" onclick="showPassword()"></div>
+                </div>
+                <div class="rememeberMe">
+                    <input type="checkbox" name="rememberMe" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <input type="submit" value="Login">
+                <div class="google">
+                    <img src="./img/google.png" alt="login with google">
+                    <a href="index.html">Login using Google</a>
+                </div>
+                <div class="facebook">
+                    <img src="./img/facelogo.png" alt="login with facebook">
+                    <a href="index.html">Login using Facebook</a>
+                </div>
+                <div class="footer">
+                    <a href="loginpage.html">Forget your password?</a>
+                    <a href="">Don't have an account? Sign up</a>
+                </div>
+            </form>
+            <form action="index.html" class="signup" style="display: none;">
+                <h1>Sign Up</h1>
+                <div class="user-name">
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" class="user">
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="user">
+                </div>
+                <input type="email" name="email" id="email" placeholder="Email" class="email">
+                <div class="password">
+                    <input type="password" class="passcode" placeholder="Password">
+                    <div class="passwordIcon show" onclick="showPassword()"></div>
+                </div>
+                <div class="password">
+                    <input type="password" class="passcode" placeholder="Confirm Password">
+                    <div class="passwordIcon show" onclick="showPassword()"></div>
+                </div>
+                <input type="submit" value="Sign Up">
+                <div class="anotherSignUp">
+                    <div class="google google-signup">
+                        <img src="./img/google.png" alt="sign up with google">
+                        <a href="index.html">Google</a>
+                    </div>
+                    <div class="facebook facebook-signup">
+                        <img src="./img/facelogo.png" alt="sign up with facebook">
+                        <a href="index.html">Facebook</a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="">Already have an account? Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- end login -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const loginForm = document.querySelector(".login");
+        const signupForm = document.querySelector(".signup");
+        const toggleBtn = document.querySelector(".toggle");
+        
+        function showPassword() {
+            const passwordIcon = document.querySelector(".passwordIcon");
+            const password = document.querySelector(".passcode");
+            if (passwordIcon.classList.contains("show")) {
+                passwordIcon.classList.remove("show");
+                passwordIcon.classList.add("hide");
+                password.type = "text";
+            } else if (passwordIcon.classList.contains("hide")) {
+                passwordIcon.classList.add("show");
+                passwordIcon.classList.remove("hide");
+                password.type = "password";
+            }
+        }
+
+        function toggleLoginSignUp() {
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+                toggleBtn.style.transform = "translate(2px, 2px)";
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+                toggleBtn.style.transform = "translate(60px, 2px)";
+            }
+        }
+    </script>
+</body>
+</html>
